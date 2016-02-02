@@ -1,6 +1,6 @@
 Package.describe({
   name: 'elm:meteor'
-, description: 'Meteor core bindings'
+, summary: 'Meteor core bindings'
 , version: '0.1.0'
 , git: 'https://github.com/Kriegslustig/meteor-elm-meteor.git'
 })
