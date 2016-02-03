@@ -8,3 +8,9 @@ isServer = Native.Meteor.isServer
 isClient : Bool
 isClient = Native.Meteor.isClient
 
+isCordova : Bool
+isCordova = Native.Meteor.isCordova
+
+startup : Signal Bool
+startup = Native.Meteor.startup
+
