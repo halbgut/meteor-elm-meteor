@@ -13,3 +13,8 @@ Package.onUse(function (api) {
   ])
 })
 
+Package.onTest(function (api) {
+  api.use(['ecmascript@0.1.6', 'tinytest'])
+  api.addFiles(['test/stub.js', 'Meteor.elm.js', 'test/tests.js'])
+})
+
