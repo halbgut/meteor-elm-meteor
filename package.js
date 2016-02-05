@@ -1,7 +1,7 @@
 Package.describe({
   name: 'elm:meteor'
 , summary: 'Meteor core bindings'
-, version: '0.1.0'
+, version: '0.1.1'
 , git: 'https://github.com/Kriegslustig/meteor-elm-meteor.git'
 })
 
@@ -14,7 +14,13 @@ Package.onUse(function (api) {
 })
 
 Package.onTest(function (api) {
-  api.use(['ecmascript@0.1.6', 'tinytest'])
-  api.addFiles(['test/stub.js', 'Meteor.elm.js', 'test/tests.js'])
+  api.use(['ecmascript@0.1.6', 'elm:make'])
+  api.addFiles([
+    '.elm-dependencies.json'
+  , 'Meteor.elm.js'
+  , 'Meteor.elm'
+  , 'test/Test._.elm'
+  , 'test/tests.js'
+  ])
 })
 
