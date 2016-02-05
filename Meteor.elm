@@ -14,3 +14,6 @@ isCordova = Native.Meteor.isCordova
 startup : Signal Bool
 startup = Native.Meteor.startup
 
+absoluteUrl : String
+absoluteUrl = Native.Meteor.absoluteUrl
+

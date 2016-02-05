@@ -26,6 +26,8 @@ tests =
     , isSignal Meteor.startup
       |> assert
       |> test "startup"
+    , Meteor.absoluteUrl `assertEqual` "http://localhost:3000/"
+      |> test "absoluteUrl"
     ]
 
 main =

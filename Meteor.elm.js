@@ -14,7 +14,7 @@ Elm.Native.Meteor.make = elm => {
     isServer: Meteor.isServer
   , isClient: Meteor.isClient
   , isCordova: Meteor.isCordova
-  , absoluteUrl: Meteor.absoluteUrl
+  , absoluteUrl: Meteor.absoluteUrl()
   , settings: Meteor.settings
   , release: Meteor.release
   , startup
