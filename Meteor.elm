@@ -17,3 +17,6 @@ startup = Native.Meteor.startup
 absoluteUrl : String
 absoluteUrl = Native.Meteor.absoluteUrl
 
+release : String
+release = Native.Meteor.release
+
