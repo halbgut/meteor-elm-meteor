@@ -20,3 +20,6 @@ absoluteUrl = Native.Meteor.absoluteUrl
 release : String
 release = Native.Meteor.release
 
+getSetting : List String -> Maybe a
+getSetting = Native.Meteor.getSetting
+

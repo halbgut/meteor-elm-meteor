@@ -35,6 +35,8 @@ tests =
       |> Regex.contains (Regex.regex "METEOR@\\d\\.\\d\\.\\d.*")
       |> assert
       |> test "release"
+    , Meteor.getSetting ["public", "something"] `assertEqual` Nothing
+      |> test "getSetting"
     ]
 
 main =
