@@ -1,7 +1,12 @@
-module Meteor.Test.Main where
+module Meteor.Test.Common where
 
+import Signal
+import Graphics.Element exposing (show)
 import Regex
 import ElmTest exposing (..)
+import Console
+import Task
+
 import Meteor
 
 isBool : Bool -> Bool
@@ -14,11 +19,11 @@ isSignal a =
 
 tests : Test
 tests =
-  suite "Check for all Methods"
-    [ Meteor.isServer == False
+  suite "Check for all common Methods"
+    [ isBool Meteor.isServer
       |> assert
       |> test "isServer"
-    , Meteor.isClient == True
+    , isBool Meteor.isClient
       |> assert
       |> test "isClient"
     , Meteor.isCordova == False
@@ -40,5 +45,7 @@ tests =
     ]
 
 main =
-  elementRunner tests
+  if Meteor.isClient
+  then elementRunner tests
+  else show " "
 

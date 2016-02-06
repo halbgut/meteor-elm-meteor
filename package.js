@@ -17,10 +17,12 @@ Package.onTest(function (api) {
   api.use(['ecmascript@0.1.6', 'elm:make'])
   api.addFiles([
     '.elm-dependencies.json'
-  , 'Meteor.elm.js'
+  , 'Native/Meteor.elm.js'
   , 'Meteor.elm'
-  , 'test/Test._.elm'
-  , 'test/tests.js'
   ])
+  api.addFiles('test/Common._.elm')
+  api.addFiles('test/Client._.elm', 'client')
+  api.addFiles('test/Server._.elm', 'server')
+  api.addFiles('test/tests.js')
 })
 
