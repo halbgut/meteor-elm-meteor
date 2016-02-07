@@ -34,3 +34,8 @@ release = Native.Meteor.release
 getSetting : List String -> Maybe a
 getSetting = Native.Meteor.getSetting
 
+{-| The current URL a client is on.
+-}
+absoluteUrl : String
+absoluteUrl = Native.Meteor.absoulteUrl
+

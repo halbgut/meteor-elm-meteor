@@ -47,5 +47,5 @@ tests =
 main =
   if Meteor.isClient
   then elementRunner tests
-  else show " "
+  else show ""
 

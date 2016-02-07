@@ -17,3 +17,6 @@ port runner : Signal (Task.Task x ())
 port runner =
   Console.run <| consoleRunner tests
 
+main =
+  show ""
+

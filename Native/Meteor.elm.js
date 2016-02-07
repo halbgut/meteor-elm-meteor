@@ -21,8 +21,6 @@ Elm.Native.Meteor.make = elm => {
     )
   }
 
-  const publish
-
   if(elm.Native.Meteor.value) return elm.Native.Meteor.value
   return elm.Native.Meteor.value = {
     isServer: Meteor.isServer
