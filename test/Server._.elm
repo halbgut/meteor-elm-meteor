@@ -1,6 +1,7 @@
 module Meteor.Test.Common where
 
 import Regex
+import Graphics.Element exposing (show)
 import ElmTest exposing (..)
 import Console
 import Task

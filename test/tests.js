@@ -11,5 +11,6 @@ if(Meteor.isClient) {
   })
 } else {
   Elm.worker(Elm.Meteor.Test.Common)
+  Elm.worker(Elm.Meteor.Test.Server)
 }
 
