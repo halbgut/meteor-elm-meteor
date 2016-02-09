@@ -4,5 +4,3 @@ Adds Elm bindings for Meteor.
 
 ## TODO
 
-* Fix the weird runtime error
-

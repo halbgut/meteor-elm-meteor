@@ -7,7 +7,7 @@ import ElmTest exposing (..)
 import Console
 import Task
 
-import Meteor
+import Meteor exposing (..)
 
 isBool : Bool -> Bool
 isBool a =
@@ -20,32 +20,34 @@ isSignal a =
 tests : Test
 tests =
   suite "Check for all common Methods"
-    [ isBool Meteor.isServer
+    [ isServer init
+      |> isBool
       |> assert
       |> test "isServer"
-    , isBool Meteor.isClient
+    , isClient init
+      |> isBool
       |> assert
       |> test "isClient"
-    , Meteor.isCordova == False
+    , isCordova init == False
       |> assert
       |> test "isCordova"
-    , isSignal Meteor.startup
+    , isSignal startup
       |> assert
       |> test "startup"
-    , Meteor.absoluteUrl
+    , init.url
       |> Regex.contains (Regex.regex "((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=\\+\\$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\\+\\$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\+=&;%@.\\w_]*)#?(?:[\\w]*))?)")
       |> assert
       |> test "absoluteUrl"
-    , Meteor.release
+    , release
       |> Regex.contains (Regex.regex "METEOR@\\d\\.\\d\\.\\d.*")
       |> assert
       |> test "release"
-    , Meteor.getSetting ["public", "something"] `assertEqual` Nothing
+    , getSetting ["public", "something"] `assertEqual` Nothing
       |> test "getSetting"
     ]
 
 main =
-  if Meteor.isClient
+  if isClient init
   then elementRunner tests
   else show ""
 

@@ -1,4 +1,4 @@
-module Meteor.Test.Common where
+module Meteor.Test.Server where
 
 import Regex
 import Graphics.Element exposing (show)
