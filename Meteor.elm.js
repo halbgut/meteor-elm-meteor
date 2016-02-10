@@ -2,6 +2,9 @@ Elm.Native.Meteor = {}
 Elm.Native.Meteor.make = elm => {
   elm.Native = elm.Native || {}
   elm.Native.Meteor = elm.Native.Meteor || {}
+  if(elm.Native.Meteor.value) return elm.Native.Meteor.value
+
+  if(typeof window !== 'undefined') window.Elm = Elm
 
   const Signal = Elm.Native.Signal.make(elm)
   const Utils = Elm.Native.Utils.make(elm)
@@ -21,7 +24,6 @@ Elm.Native.Meteor.make = elm => {
     )
   }
 
-  if(elm.Native.Meteor.value) return elm.Native.Meteor.value
   return elm.Native.Meteor.value = {
     isServer: Meteor.isServer
   , isClient: Meteor.isClient

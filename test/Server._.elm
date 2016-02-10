@@ -6,7 +6,7 @@ import ElmTest exposing (..)
 import Console
 import Task
 
-import Meteor
+import Meteor.Server
 
 tests : Test
 tests =

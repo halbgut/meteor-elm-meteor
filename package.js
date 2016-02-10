@@ -8,7 +8,10 @@ Package.describe({
 Package.onUse(function (api) {
   api.use(['ecmascript@0.1.6', 'meteor@1.1.10', 'elm:make@0.2.2'])
   api.addFiles([
-    'Meteor.elm.js'
+    '.elm-dependencies.json'
+  , 'Server.elm.js'
+  , 'Server.elm'
+  , 'Meteor.elm.js'
   , 'Meteor.elm'
   ])
 })
@@ -17,7 +20,7 @@ Package.onTest(function (api) {
   api.use(['ecmascript@0.1.6', 'elm:make'])
   api.addFiles([
     '.elm-dependencies.json'
-  , 'Native/Meteor.elm.js'
+  , 'Meteor.elm.js'
   , 'Meteor.elm'
   ])
   api.addFiles('test/Common._.elm')
