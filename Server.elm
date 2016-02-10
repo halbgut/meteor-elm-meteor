@@ -5,7 +5,7 @@ import Signal exposing (merge)
 import List
 
 import Native.Meteor.Server
-import Mongo.Curser
+import Mongo
 
 type alias Conn =
   { id : String
@@ -14,10 +14,11 @@ type alias Conn =
   }
 
 type Sub =
-  { userId : String
-  , connection : Conn
-  } |
-  Responded
+  Subscription
+    { userId : String
+    , connection : Conn
+    }
+  | Responded
 
 type alias Config =
   { subs : List (Signal Sub)
