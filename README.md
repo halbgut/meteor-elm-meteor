@@ -6,6 +6,7 @@ Adds Elm bindings for Meteor.
 
 I simply copied the table of contents of the [Meteor docs](http://docs.meteor.com/#/full/).
 
+```
 y: Implemented
 t: ToDo
 ~: Not jet evaluated
@@ -57,27 +58,6 @@ Server connections
 ~    Meteor.disconnect
 ~    Meteor.onConnection
 ~    DDP.connect
-
-Collections
-~   Mongo.Collection
-~     collection.find
-~     collection.findOne
-~     collection.insert
-~     collection.update
-~     collection.upsert
-~     collection.remove
-~     collection.allow
-~     collection.deny
-~     collection.rawCollection
-~     collection.rawDatabase
-~   Mongo.Cursor
-~     cursor.forEach
-~     cursor.map
-~     cursor.fetch
-~     cursor.count
-~     cursor.observe
-~     cursor.observeChanges
-~   Mongo.ObjectID
 
 Session
 y   Session.set
@@ -255,4 +235,5 @@ N   App.accessRule
 N   App.configurePlugin
 N   App.icons
 N   App.launchScreens
+```
 
